@@ -1,13 +1,16 @@
+
 function findNeighbors(node, matrix) {
+    let neighbors = []
     // Up
-
+    if (node[0] - 1 >= 0) neighbors.push([node[0] - 1, node[1]])
     // Down
-
+    if (node[0] + 1 <= matrix.length - 1) neighbors.push([node[0] + 1, node[1]])
     // Left
-
+    if (node[1] - 1 >= 0) neighbors.push([node[0], node[1] - 1])
     // Right
-
+    if (node[1] + 1 <= matrix[0].length - 1) neighbors.push([node[0], node[1] + 1])
     // Your code here
+    return neighbors
 }
 
 
