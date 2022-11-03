@@ -2,15 +2,20 @@
 function findNeighbors(node, matrix) {
     let neighbors = []
     // Up
-    if (node[0] - 1 >= 0) neighbors.push([node[0] - 1, node[1]])
+    let up = [node[0] - 1, node[1]]
+    if (node[0] - 1 >= 0) neighbors.push(up)
     // Down
-    if (node[0] + 1 <= matrix.length - 1) neighbors.push([node[0] + 1, node[1]])
+    let down = [node[0] + 1, node[1]]
+    if (node[0] + 1 <= matrix.length - 1) neighbors.push(down)
     // Left
-    if (node[1] - 1 >= 0) neighbors.push([node[0], node[1] - 1])
+    let left = [node[0], node[1] - 1]
+    if (node[1] - 1 >= 0) neighbors.push(left)
     // Right
-    if (node[1] + 1 <= matrix[0].length - 1) neighbors.push([node[0], node[1] + 1])
+    let right = [node[0], node[1] + 1]
+    if (node[1] + 1 <= matrix[0].length - 1) neighbors.push(right)
     // Your code here
     return neighbors
+
 }
 
 
